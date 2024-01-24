@@ -23,7 +23,7 @@ driver = webdriver.Chrome(service = service, options = options)
 pages = [105, 105, 105, 81, 105, 81]
 
 df_titles = pd.DataFrame()
-for l in range(6):
+for l in range(1):
     section_url = 'https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=10{}'.format(l)
     titles = []
     for k in range(1, pages[l]):
@@ -39,7 +39,7 @@ for l in range(6):
                 try:
                     title = driver.find_element('xpath',
                                                 '//*[@id="section_body"]/ul[{}]/li[{}]/dl/dt[2]/a'.format(i, j)).text
-                    title = re.compile('[^가-힣]]').sub(' ', title)
+                    title = re.compile('[^가-힣]').sub(' ', title)
                     titles.append(title)
                 except:
                     print('find element', l, k, i, j)
