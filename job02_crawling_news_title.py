@@ -39,7 +39,7 @@ for l in range(6):
                 try:
                     title = driver.find_element('xpath',
                                                 '//*[@id="section_body"]/ul[{}]/li[{}]/dl/dt[2]/a'.format(i, j)).text
-                    title = re.compile('[^가-힣]]').sub(' ', title)
+                    title = re.compile('[^가-힣]').sub(' ', title)
                     titles.append(title)
                 except:
                     print('find element', l, k, i, j)
