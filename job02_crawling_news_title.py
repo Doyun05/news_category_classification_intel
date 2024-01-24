@@ -12,7 +12,7 @@ import time
 import datetime
 
 category = ['Politics', 'Economic', 'social', 'Culture', 'World', 'IT']
-
+            #   0           1           2         3         4        5
 options = ChromeOptions()
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 options.add_argument('user_agent=' + user_agent)
